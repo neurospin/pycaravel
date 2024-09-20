@@ -39,14 +39,14 @@ class JSON(LoaderBase):
             data = json.load(open_file)
         return data
 
-    def save(self, data, outpath):
+    def save(self, data, path):
         """ A method that save the data in a JSON file.
 
         Parameters
         ----------
         data: object
             the data to be saved.
-        outpath: str
+        path: str
             the path where the the data will be saved.
         """
         with open(path, "wt") as open_file:

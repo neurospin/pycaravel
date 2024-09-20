@@ -12,7 +12,6 @@ This module defines the CSV dataset loader.
 
 # Third party import
 import pandas as pd
-import math
 
 # Package import
 from .loader_base import LoaderBase
@@ -30,7 +29,7 @@ class CSV(LoaderBase):
         Parameters
         ----------
         path: str
-            the path to the table to be loaded.
+            the path to the CSV file to load.
         **kwargs: see pd.read_csv.
 
         Returns
@@ -42,14 +41,14 @@ class CSV(LoaderBase):
         return pd.read_csv(path, header=header_type, sep=separator,
                 usecols=usecols, nrows=nrows, skiprows=skiprows)
 
-    def save(self, data, outpath):
+    def save(self, data, path):
         """ A method that save the table.
 
         Parameters
         ----------
         data: pandas DataFrame
             the table to be saved.
-        outpath: str
-            the path where the the table will be saved.
+        path: str
+            the path to the CSV file to save the table into.
         """
-        data.to_csv(outpath)
+        data.to_csv(path)

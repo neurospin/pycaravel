@@ -13,7 +13,6 @@ properly.
 
 # System import
 import importlib
-import distutils
 
 # Package import
 from .info import __version__
@@ -48,7 +47,7 @@ def _check_python_versions():
             mod_name = "progressbar"
         try:
             mod_install_version = importlib.import_module(mod_name).__version__
-        except:
+        except Exception:
             mod_install_version = "?"
         versions[mod_name] = (operator + mod_min_version, mod_install_version)
     return versions
