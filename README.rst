@@ -10,7 +10,7 @@
 .. |PyPi| image:: https://badge.fury.io/py/pycaravel.svg
 .. _PyPi: https://badge.fury.io/py/pycaravel
 
-**Now hosted under https://github.com/neurospin-cloud**
+**Now hosted under https://github.com/neurospin-cloud/pycaravel**
 
 pycaravel
 =========
